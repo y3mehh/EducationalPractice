@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Список Задач</title>
+        <% include partials/scripts %>
+        <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+    </head>
+    <body>
+        <h1>Мой список задач</h1>
+        <div id="todo-table">
+            <form>
+                <input type="text" name="item" placeholder="Добавить новую задачу..." required>
+                <button type="submit">Добавить</button>
+            </form>
+            <ul>
+                <% for(var i=0; i<todos.length; i++) { %>
+                    <li><%= todos[i].item %></li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>
