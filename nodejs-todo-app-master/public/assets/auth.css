@@ -1,0 +1,80 @@
+body {
+    background: #0d1521;
+    font-family: Tahoma, sans-serif;
+    color: #989898;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#auth-container {
+    width: 400px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.form-box {
+    background: #090d13;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.form-box h2 {
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #181c22; /* тёмный фон */
+    border: 0;
+    color: #989898;
+    font-size: 16px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    width: 100%;
+    padding: 15px;
+    background: #23282e;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #3a414b;
+}
+
+.forgot-password-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-password {
+    color: #989898;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    color: #fff;
+}

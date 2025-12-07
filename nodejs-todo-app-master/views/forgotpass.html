@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Восстановление пароля</title>
+    <link rel="stylesheet" href="/assets/auth.css">
+</head>
+<body>
+    <div id="auth-container">
+        <div class="form-box">
+            <h2>Восстановление пароля</h2>
+            <div id="message" style="margin-bottom: 10px; text-align: center; font-weight: bold;">
+                {{message}}
+            </div>
+            <form action="/forgot-password" method="POST">
+                <input type="text" name="username" placeholder="Логин" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <button type="submit">Восстановить пароль</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

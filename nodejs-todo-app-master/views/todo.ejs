@@ -1,21 +1,30 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Список Задач</title>
-        <% include partials/scripts %>
-        <link rel="stylesheet" href="/assets/styles.css" type="text/css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>Список Задач</title>
+    <% include partials/scripts %>
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+</head>
+<body>
+    <div id="header">
         <h1>Мой список задач</h1>
-        <div id="todo-table">
-            <form>
-                <input type="text" name="item" placeholder="Добавить новую задачу..." required>
-                <button type="submit">Добавить</button>
-            </form>
-            <ul>
-                <% for(var i=0; i<todos.length; i++) { %>
-                    <li><%= todos[i].item %></li>
-                <% } %>
-            </ul>
-        </div>
-    </body>
+    </div>
+    <div id="todo-table">
+        <form id="todo-form">
+            <input type="text" name="item" placeholder="Добавить новую задачу..." required>
+            <button type="submit">Добавить</button>
+        </form>
+        <ul>
+            <% for (var i = 0; i < todos.length; i++) { %>
+                <li><%= todos[i].item %></li>
+            <% } %>
+        </ul>
+    </div>
+    <form action="/logout" method="POST" id="logout-form">
+        <button type="submit" id="logout-button">Выйти</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/todo list.js"></script>
+</body>
 </html>

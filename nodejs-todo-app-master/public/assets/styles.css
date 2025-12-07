@@ -1,70 +1,102 @@
-body{
+body {
     background: #0d1521;
-    font-family: tahoma;
+    font-family: Tahoma, sans-serif;
     color: #989898;
+    margin: 0;
+    padding: 0;
 }
 
-#todo-table{
+#todo-table {
     position: relative;
     width: 95%;
     background: #090d13;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+/* Форма с input и кнопкой в одну линию */
+#todo-table form {
+    display: flex;
+    gap: 10px; /* расстояние между инпутом и кнопкой */
+    margin-bottom: 20px;
+}
+
+#todo-table input[type="text"] {
+    flex: 1; /* занимает всё доступное место */
+    padding: 15px 20px;
+    background: #181c22;
+    border: 0;
+    font-size: 18px;
+    color: #989898;
+    border-radius: 4px;
     box-sizing: border-box;
 }
 
-#todo-table form:after{
-    margin: 0;
-    content: '';
-    display: block;
-    clear: both;
-}
-
-input[type="text"]{
-    width: 70%;
-    padding: 20px;
-    background:#181c22;
-    border: 0;
-    float: left;
-    font-size: 20px;
-    color: #989898;
-}
-
-button{
-    padding: 20px;
-    width: 30%;
-    float: left;
+#todo-table button {
+    padding: 15px 20px;
     background: #23282e;
     border: 0;
-    box-sizing: border-box;
     color: #fff;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    flex-shrink: 0; /* кнопка не сжимается */
+    transition: background 0.3s;
 }
 
-ul{
+#todo-table button:hover {
+    background: #3a3f49;
+}
+
+ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-li{
+li {
     width: 100%;
-    padding: 20px;
+    padding: 15px 10px;
     box-sizing: border-box;
-    font-family: arial;
-    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
     cursor: pointer;
     letter-spacing: 1px;
+    border-bottom: 1px solid #1a1f28;
+    transition: background 0.2s, text-decoration 0.2s;
 }
 
-li:hover{
+li:hover {
     text-decoration: line-through;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
-h1{
+h1 {
     background: url(/assets/logo.png) no-repeat center;
     margin-bottom: 0;
     text-indent: -10000px;
+}
+
+#logout-form {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+}
+
+#logout-button {
+    padding: 12px 20px;
+    background: #e74c3c;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#logout-button:hover {
+    background: #c0392b;
 }

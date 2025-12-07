@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/assets/auth.css">
+</head>
+<body>
+    <div id="auth-container">
+        <div class="form-box">
+            <h2>Регистрация</h2>
+            <div id="message" style="margin-bottom: 10px; text-align: center; font-weight: bold;">
+                {{message}}
+            </div>
+
+            <form action="/register" method="POST">
+                <input type="text" name="username" placeholder="Логин" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+    </div>
+</body>
+</html>
